@@ -3,34 +3,56 @@ import SplitText from "./components/SplitText";
 import AnimatedContent from "./components/AnimatedContent";
 
 function App() {
+  const phoneNumber = "+522411036474";
+  const message = "Hola, me gustaría ordenar...";
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
   return (
     <>
+      {/* Header */}
       <section className="hero body-font h-dvh flex justify-center items-center bg-black">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"></div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <SplitText></SplitText>
-
+            <h1 className="text-center text-white tracking-widest text-xl lilita-one-regular mb-4">
+              Siguenos en nuestras redes
+            </h1>
             <div className="grid grid-cols-4 gap-4">
-              <button
-                id="facebook"
-                className="bg-white  sticky duration-500 border-2 border-blue-600 fixed  w-12 transform hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600 "
+              <a
+                href="https://www.facebook.com/profile.php?id=100094771684830"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <i className="fab fa-facebook-f"></i>
-              </button>
-              <button
-                id="instagram"
-                className=" border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-12 h-12  transform hover:-translate-y-3 rounded-full duration-500 "
+                <button
+                  id="facebook"
+                  className="bg-white sticky duration-500 border-2 border-blue-600 fixed w-12 transform hover:-translate-y-3 h-12 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600"
+                >
+                  <i className="fab fa-facebook-f"></i>
+                </button>
+              </a>
+              <a
+                href="https://www.instagram.com/big__burger29/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <i className="fab fa-instagram"></i>
-              </button>
+                <button
+                  id="instagram"
+                  className=" border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-12 h-12  transform hover:-translate-y-3 rounded-full duration-500 "
+                >
+                  <i className="fab fa-instagram"></i>
+                </button>
+              </a>
 
-              <button
-                id="whatsapp"
-                className="bg-white duration-500    w-12 h-12 border-2 rounded-full border-green-600 transform hover:-translate-y-3  text-2xl text-green-500 hover:bg-green-600 hover:text-white"
-              >
-                <i className="fab fa-whatsapp"></i>
-              </button>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <button
+                  id="whatsapp"
+                  className="bg-white duration-500    w-12 h-12 border-2 rounded-full border-green-600 transform hover:-translate-y-3  text-2xl text-green-500 hover:bg-green-600 hover:text-white"
+                >
+                  <i className="fab fa-whatsapp"></i>
+                </button>
+              </a>
 
               <button
                 id="tiktok"
@@ -42,7 +64,10 @@ function App() {
           </div>
         </div>
       </section>
-
+      {/* Galeria */}
+      <h1 className="text-center text-yellow-400 tracking-widest text-6xl mb-1 mt-6 lilita-one-regular">
+        GALERÍA
+      </h1>
       <AnimatedContent
         distance={150}
         direction="horizontal"
@@ -151,6 +176,10 @@ function App() {
         </div>
       </AnimatedContent>
 
+      {/* Menu */}
+      <h1 className="text-center text-yellow-400 tracking-widest text-6xl mb-1 lilita-one-regular">
+        MENÚ
+      </h1>
       <section className="body-font flex flex-col sm:flex-row gap-8 sm:gap-24 mx-auto justify-center items-center p-4">
         <img
           className="h-auto max-w-full rounded-lg sm:max-w-[45%]"
@@ -164,7 +193,11 @@ function App() {
         />
       </section>
 
-      <section className="text-gray-600 body-font h-screen flex items-center justify-center mx-auto">
+      {/* Mapa */}
+      <h1 className="text-center text-yellow-400 tracking-widest text-6xl mt-6 lilita-one-regular">
+        NUESTRA UBICACIÓN
+      </h1>
+      <section className="text-gray-600 body-font h-screen flex items-center justify-center">
         <div className="container mx-auto flex sm:flex-nowrap w-dvh">
           <div className="lg:w-full sm:w-1/2 bg-gray-300 rounded-lg h-[80vh] overflow-hidden sm:mr-10 p-10 flex items-end justify-center relative">
             <iframe
@@ -176,12 +209,12 @@ function App() {
               marginHeight="0"
               marginWidth="0"
               scrolling="no"
-              src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30103.953486087452!2d-98.16030272993805!3d19.41265718917218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d02018b3a0bddd%3A0xa99644cd634bcb3e!2sCdad.%20de%20Apizaco%2C%20Tlax.!5e0!3m2!1ses-419!2smx!4v1739822264717!5m2!1ses-419!2smx"
             ></iframe>
             <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
               <div className="lg:w-1/2 px-6">
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
-                  ADDRESS
+                  DIRECCIÓN
                 </h2>
                 <p className="mt-1">
                   Photo booth tattooed prism, portland taiyaki hoodie neutra
@@ -190,25 +223,26 @@ function App() {
               </div>
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
-                  EMAIL
+                  NUESTRO CORREO
                 </h2>
                 <a className="text-yellow-500 leading-relaxed">
                   example@email.com
                 </a>
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
-                  PHONE
+                  ORDENA AL
                 </h2>
-                <p className="leading-relaxed">123-456-7890</p>
+                <p className="leading-relaxed">2411036474</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="text-gray-600 body-font bg-white">
-        <div className="bg-gray-100">
+      {/* Pie de página */}
+      <footer className="text-gray-white body-font">
+        <div className="bg-black">
           <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-            <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -223,12 +257,12 @@ function App() {
               </svg>
               <span className="ml-3 text-xl">BIG BURGER</span>
             </a>
-            <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
+            <p className="text-sm text-white sm:ml-6 sm:mt-0 mt-4">
               © 2025 Sebastian Daza —
               <a
-                href="https://twitter.com/knyttneve"
+                href="https://www.linkedin.com/in/sebdazap/"
                 rel="noopener noreferrer"
-                className="text-gray-600 ml-1"
+                className="text-gray-400 ml-1"
                 target="_blank"
               >
                 @sebdazap
