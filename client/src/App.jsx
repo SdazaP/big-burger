@@ -16,51 +16,80 @@ function App() {
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"></div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <SplitText></SplitText>
-            <h1 className="text-center text-white tracking-widest text-xl lilita-one-regular mb-4">
-              Siguenos en nuestras redes
-            </h1>
-            <div className="grid grid-cols-4 gap-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=100094771684830"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  id="facebook"
-                  className="bg-white sticky duration-500 border-2 border-blue-600 fixed w-12 transform hover:-translate-y-3 h-12 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600"
-                >
-                  <i className="fab fa-facebook-f"></i>
-                </button>
-              </a>
-              <a
-                href="https://www.instagram.com/big__burger29/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  id="instagram"
-                  className=" border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-12 h-12  transform hover:-translate-y-3 rounded-full duration-500 "
-                >
-                  <i className="fab fa-instagram"></i>
-                </button>
-              </a>
-
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <button
-                  id="whatsapp"
-                  className="bg-white duration-500    w-12 h-12 border-2 rounded-full border-green-600 transform hover:-translate-y-3  text-2xl text-green-500 hover:bg-green-600 hover:text-white"
-                >
-                  <i className="fab fa-whatsapp"></i>
-                </button>
-              </a>
-
-              <button
-                id="tiktok"
-                className="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-black border-black hover:bg-black hover:text-white text-2xl"
-              >
-                <i className="fab fa-tiktok"></i>
+            <a href="#menu">
+              <button className="rounded-lg relative w-46 h-10 cursor-pointer flex items-center  bg-yellow-500 group hover:yellow-500 active:bg-ywllow-500">
+                <span className="text-white font-semibold ml-8 transform group-hover:translate-x-20 group-hover:opacity-0 transition-all duration-300 lilita-one-regular">
+                  Ver menu
+                </span>
+                <span className="absolute right-0 h-full w-10 rounded-lg bg-yellow-500 flex items-center justify-center transform group-hover:translate-x-0 group-hover:w-full transition-all duration-350">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                  </svg>
+                </span>
               </button>
-            </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      {/* Social Media */}
+      <section className="flex justify-center items-center h-120">
+        <div className=" flex flex-col  items-center text-center">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <button className="rounded-lg relative w-46 h-10 cursor-pointer flex items-center bg-black/90 group hover:bg-black active:bg-black">
+              <span className="text-white font-semibold ml-8 transform group-hover:translate-x-20 group-hover:opacity-0 transition-all duration-300 lilita-one-regular">
+                Ordena Aqui
+              </span>
+              <span className="absolute right-0 h-full w-10 rounded-lg bg-green-500 flex items-center justify-center transform group-hover:translate-x-0 group-hover:w-full transition-all duration-350">
+                <i className="fab fa-whatsapp text-white text-xl"></i>{" "}
+              </span>
+            </button>
+          </a>
+          <h1 className="text-center text-white tracking-widest text-xl lilita-one-regular my-10">
+            Siguenos en nuestras redes
+          </h1>
+          <div className="grid grid-cols-3 gap-4">
+            <a
+              href="https://www.facebook.com/profile.php?id=100094771684830"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button
+                id="facebook"
+                className="bg-white sticky duration-500 border-2 border-blue-600 fixed w-12 transform hover:-translate-y-3 h-12 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600"
+              >
+                <i className="fab fa-facebook-f"></i>
+              </button>
+            </a>
+            <a
+              href="https://www.instagram.com/big__burger29/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button
+                id="instagram"
+                className=" border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-12 h-12  transform hover:-translate-y-3 rounded-full duration-500 "
+              >
+                <i className="fab fa-instagram"></i>
+              </button>
+            </a>
+
+            <button
+              id="tiktok"
+              className="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-black border-black hover:bg-black hover:text-white text-2xl"
+            >
+              <i className="fab fa-tiktok"></i>
+            </button>
           </div>
         </div>
       </section>
@@ -177,7 +206,7 @@ function App() {
       </AnimatedContent>
 
       {/* Menu */}
-      <h1 className="text-center text-yellow-400 tracking-widest text-6xl mb-1 lilita-one-regular">
+      <h1 className="text-center text-yellow-400 tracking-widest text-5xl sm:text-6xl mb-1 lilita-one-regular" id="menu">
         MENÚ
       </h1>
       <section className="body-font flex flex-col sm:flex-row gap-8 sm:gap-24 mx-auto justify-center items-center p-4">
@@ -194,7 +223,7 @@ function App() {
       </section>
 
       {/* Mapa */}
-      <h1 className="text-center text-yellow-400 tracking-widest text-6xl mt-6 lilita-one-regular">
+      <h1 className="text-center text-yellow-400 tracking-widest text-5xl sm:text-6xl mt-6 lilita-one-regular">
         NUESTRA UBICACIÓN
       </h1>
       <section className="text-gray-600 body-font h-screen flex items-center justify-center">

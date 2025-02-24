@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const SplitText = ({
   text = 'BIG BURGER',
-  className = 'text-6xl font-bold text-center text-white lilita-one-regular tracking-widest sm:text-8xl',
+  className = 'text-7xl font-bold text-center text-white lilita-one-regular tracking-widest sm:text-8xl mb-16',
   delay = 200,
   animationFrom = { opacity: 0, transform: 'translate3d(0,40px,0)' },
   animationTo = { opacity: 1, transform: 'translate3d(0,0,0)' },
@@ -76,7 +76,7 @@ const SplitText = ({
               </animated.span>
             );
           })}
-          <span style={{ display: 'block', width: '0.5em' }}>&nbsp;</span>
+          
         </span>
       ))}
     </p>
